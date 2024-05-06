@@ -171,7 +171,8 @@ section div p {
 }
 
 /* mq tablets */
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
+    
     header img {
         width: 150px;
         padding: 10px 20px;
@@ -186,10 +187,19 @@ section div p {
         margin-right: 0; 
         margin-bottom: 10px; 
     }
+
+    section div {
+        max-width: 200px; 
+    }
+
+    section {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* mq pc */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1020px) {
+    
     header img {
         width: 150px;
         padding: 15px 30px;
@@ -202,5 +212,12 @@ section div p {
     nav ul li {
         margin-right: 25px;
         margin-bottom: 0;
+    }
+    section div {
+        max-width: 250px; 
+    }
+
+    section {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     }
 }
